@@ -1,0 +1,4 @@
+syntax
+return-type function-name(<parameter>){
+
+}

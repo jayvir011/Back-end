@@ -8,8 +8,7 @@ int main()
 {
     int a=10;
     char c='a';
-    char ch[]="krunal";
-    string str="kavya";
+    ;
     string str2=str;
     float marks=99.99;
 
@@ -23,3 +22,4 @@ int main()
     cout<<add(10,20);
     return 0;
 }
+//username and passworrd  vado program banavo using nasted if

@@ -7,6 +7,7 @@ struct Student {
     float marks;
 };
 
+
 int main() {
     // Declare a structure variable
     struct Student s1;

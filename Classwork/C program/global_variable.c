@@ -7,6 +7,6 @@ void disp()
 void main()
 {
     k++;
-    printf("main %d",k);
+    printf("main %d\n",k);
     disp();
 }

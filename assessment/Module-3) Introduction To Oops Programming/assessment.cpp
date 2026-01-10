@@ -5,7 +5,7 @@ class event
 public:
     string eventname,firstname,lastname;
     int guests,time,servers,cost1,cost2;
-    void setservers
+    //void setservers
     double costperhour=18.50;
     double costperminutes=0.40;
     double costforfood=20.70;

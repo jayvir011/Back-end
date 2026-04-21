@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID and Class Selection | CSS Basics</title>
+    <link rel="stylesheet" href="SelectionStyler.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Assignment: IDs and Classes</h1>
+
+        <!-- Unique element with an ID -->
+        <div id="featured-product">
+            <h2>The Galaxy Hub</h2>
+            <p>This element is styled using a unique ID selector (<code>#featured-product</code>). It features a distinct gradient, border, and an exclusive ribbon styling that doesn't apply to any other element on this page.</p>
+        </div>
+
+        <!-- Repeated elements with a Class -->
+        <div class="content-box">
+            <h3>Standard Service</h3>
+            <p>These boxes are styled using a shared class selector (<code>.content-box</code>). By applying the same class, we ensure consistent padding, background, and hover effects across multiple elements.</p>
+        </div>
+
+        <div class="content-box">
+            <h3>Extended Support</h3>
+            <p>Because this element also uses the <code>.content-box</code> class, it automatically inherits all the styles defined for that class without needing any additional CSS lines.</p>
+        </div>
+
+        <div class="content-box">
+            <h3>Cloud Sync</h3>
+            <p>Classes are perfect for reusable components like cards, buttons, or list items, while IDs are reserved for one-of-a-kind structural elements.</p>
+        </div>
+    </div>
+
+</body>
+</html>

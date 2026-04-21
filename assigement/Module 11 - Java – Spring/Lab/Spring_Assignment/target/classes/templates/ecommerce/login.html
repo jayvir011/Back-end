@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container" style="max-width: 400px; text-align: center;">
+        <h1>Login</h1>
+        <div th:if="${param.error}" style="color: red;">Invalid username or password.</div>
+        <form th:action="@{/login}" method="post" class="card" style="padding: 2rem; margin-top: 1rem;">
+            <input type="text" name="username" placeholder="Username" style="width: 100%; margin-bottom: 1rem; padding: 0.5rem;" /><br/>
+            <input type="password" name="password" placeholder="Password" style="width: 100%; margin-bottom: 1rem; padding: 0.5rem;" /><br/>
+            <button type="submit" class="btn" style="width: 100%;">Sign In</button>
+        </form>
+        <p>New user? <a href="/register">Register here</a></p>
+        <p>Or</p>
+        <a href="/oauth2/authorization/google" class="btn" style="background: white; color: #444; border: 1px solid #ccc; width: 100%;">Login with Google</a>
+    </div>
+</body>
+</html>

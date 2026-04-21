@@ -1,0 +1,5 @@
+FROM openjdk:17-jdk-alpine
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+# Overriding the main class at runtime
+ENTRYPOINT ["java", "-cp", "app.jar", "org.springframework.boot.loader.JarLauncher", "--spring.main.sources=com.javapractical.program3.orderservice.OrderServiceApplication"]

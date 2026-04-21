@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>E-Comm Shop</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><strong>QuickShop</strong></div>
+        <div class="links">
+            <a href="/">Home</a> | 
+            <a href="/admin/dashboard" sec:authorize="hasRole('ADMIN')">Admin</a> |
+            <a href="/login" sec:authorize="!isAuthenticated()">Login</a>
+            <a href="/logout" sec:authorize="isAuthenticated()">Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Our Products</h1>
+        <div class="product-grid">
+            <div class="card" th:each="p : ${productPage.content}">
+                <div class="card-body">
+                    <h3 th:text="${p.name}">Product</h3>
+                    <p th:text="${p.description}">Description</p>
+                    <p><strong>$<span th:text="${p.price}">0</span></strong></p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination" style="margin-top: 2rem;">
+            <a th:if="${productPage.hasPrevious()}" th:href="@{/(page=${productPage.number - 1})}" class="btn">Prev</a>
+            <span th:text="${productPage.number + 1}"></span>
+            <a th:if="${productPage.hasNext()}" th:href="@{/(page=${productPage.number + 1})}" class="btn">Next</a>
+        </div>
+    </div>
+</body>
+</html>

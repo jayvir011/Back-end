@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Form</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container" style="max-width: 500px;">
+        <h1>Product Details</h1>
+        <form th:action="@{/admin/product/save}" th:object="${product}" method="post" class="card" style="padding: 2rem;">
+            <input type="hidden" th:field="*{id}" />
+            <label>Name</label>
+            <input type="text" th:field="*{name}" style="width: 100%; margin-bottom: 1rem;" /><br/>
+            
+            <label>Price</label>
+            <input type="number" step="0.01" th:field="*{price}" style="width: 100%; margin-bottom: 1rem;" /><br/>
+            
+            <label>Description</label>
+            <textarea th:field="*{description}" style="width: 100%; margin-bottom: 1rem;"></textarea><br/>
+            
+            <button type="submit" class="btn">Save Product</button>
+            <a href="/admin/dashboard" style="margin-left: 1rem;">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>

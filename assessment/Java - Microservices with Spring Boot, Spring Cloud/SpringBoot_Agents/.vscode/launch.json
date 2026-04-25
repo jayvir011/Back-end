@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CampusBotApplication<campus-bot>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.campusbot.CampusBotApplication",
+            "projectName": "campus-bot",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
